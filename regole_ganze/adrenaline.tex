@@ -1,0 +1,156 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[left = 2.5cm, right = 2.5cm, top = 2.5cm, bottom = 2.5cm]{geometry}
+
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage[parfill]{parskip}
+\usepackage[hidelinks]{hyperref}
+
+\title{Adrenaline}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+\section{Game Board} \label{sec:game-board}
+	La plancia di gioco è composta da due parti con entrambe le facce utilizzabili.
+	Combinando le varie facce si ottengono 4 mappe differenti.
+	\subsection{Room} \label{sec:room}
+		La mappa di gioco è composta da delle rooms, ognuna di un colore differente.
+		Ogni room è composta da 1 o più squares.
+		\subsubsection{Square} \label{sec:square}
+		 	Ogni square possiede diversi tipi di lati:
+		 	\begin{itemize}
+		 		\item \textbf{Lato con Door}: La door collega due room adiacenti. 
+		 		E' possibile passarci attraverso per spostarsi nella room accanto.
+		 		\item \textbf{Lato con Wall}: Il wall non permette di spostarsi nella direzione di questo lato.
+		 		\item \textbf{Lato aperto}: Il lato aperto collega lo square con uno square adiacente della stessa room.
+		 	Un giocatore è visibile se è nella tua stessa room o se è in uno square di una room diversa collegata al tuo square tramite una porta.
+		 	
+		 	Inoltre, ogni square può avere o lo spawnpoint o lo slot per una \hyperref[sec:ammo-tiles]{ammo tile}.
+		 	\end{itemize}
+	\subsection{Killshot Track} \label{sec:killshot-track}
+		Sul killshot track vengono posizionati gli \hyperref[sec:skulls]{skulls}.
+
+\section{Skulls} \label{sec:skulls}
+	Gli skulls sono utilizzati per tenere il conto delle uccisioni mancanti prima della fine della partita.
+	Quando viene effettuata una uccisione lo skull più a sinistra viene spostato sulla \hyperref[sec:player-board]{player board} del giocatore ucciso. 
+\section{Point Tokens} \label{sec:point-tokens}
+	I point tokens sono utilizzati per tenere il conto dei punti. Sono in taglia da 1, 2 e 4.
+\section{Starting Player Marker} \label{sec:starting-player-marker}
+	Lo starting player marker è una tessera assegnata al primo giocatore.
+\section{Player Board} \label{sec:player-board}
+	La player board è la plancia di ogni giocatore.
+	\subsection{HP Box} \label{sec:hp-box}
+		Vengono segnati i danni subiti dal giocatore attraverso i \hyperref[sec:damage-tokens]{damage tokens}. Vengono inseriti da sinistra verso destra.
+		
+		Se il giocatore subisce più di 3 sblocca la prima adrenaline action. 
+		Se subisce più di 6 adrenaline action.
+	\subsection{Ammo Box} \label{sec:ammo-box}
+		Zona in cui vengono posizionati gli \hyperref[sec:ammo-cubes]{ammo cubes} disponibili all'utilizzo.
+	\subsection{Marks Box} \label{sec:marks-box}
+		Zona in cui vengono posizionati i \hyperref[sec:damage-tokens]{damage tokens} per rappresentare i \hyperref[sec:mark]{marks} sul giocatore.
+\section{Action Tile} \label{sec:action-tile}
+	Tessera che mostra le azioni disponibili e il numero di mosse disponibili.
+\section{Damage Tokens} \label{sec:damage-tokens}
+	Segnalini utilizzati per segnare i danni inflitti o i \hyperref[sec:mark]{marks} inflitti.
+\section{Ammo Cubes} \label{sec:ammo-cubes}
+	Nella scatola ci sono 45 ammo cubes, 15 per ogni colore (rosso, giallo e blu).
+	Gli ammo cubes vengono utilizzati per ricaricare le armi o per utilizzare effetti delle \hyperref[sec:powerup-cards]{powerup cards} o \hyperref[sec:weapon-cards]{weapon cards}.
+	
+	Nella fase di preparazione della partita vengono distribuiti 3 ammo cubes per colore ad ogni giocatore di cui solo 1 per colore viene messo nella \hyperref[sec:ammo-box]{ammo box}.
+	Ogni giocatore può possedere al \textbf{massimo 3 ammo cubes}.
+	
+	Solo gli ammo cube all'interno della \hyperref[sec:ammo-box]{ammo box} posso essere spesi. Una volta utilizzati, vengono riposti fuori da quest'ultima.
+	
+\section{Ammo Tiles} \label{sec:ammo-tiles}
+	Tessera che se raccolta permette di guadagnare munizioni e/o potenziamenti. Sul dorso sono presenti o 3 \hyperref[sec:ammo-cubes]{ammo cubes} di colori differenti o 2  \hyperref[sec:ammo-cubes]{ammo cubes} e 1 \hyperref[sec:powerup-cards]{powerup card}.
+\section{Carte}
+	\subsection{Powerup Cards} \label{sec:powerup-cards}
+		Nella scatola ci sono 24 powerup cards. Esistono 4 tipi di powerup card e ciascuna può essere rossa, gialla o blu:
+		\begin{itemize}
+			\item \textbf{Targeting Scope}: Puoi giocare questa carta quando stai infliggendo danno a uno o più bersagli. 
+			Paga una \hyperref[sec:ammo-cubes]{ammo cube} di qualsiasi colore e infliggi un danno aggiuntivo a uno dei bersagli. 
+			Non puoi utilizzare questa carta per infliggere 1 danno a un bersaglio che sta solo ricevendo marchi.
+			\item \textbf{Newton}: Puoi giocare questa carta nel tuo turno prima o dopo aver svolto una qualsiasi azione.
+			Scegli una delle miniature degli altri giocatori e muovila di 1 o 2 quadrati in una direzione. 
+			Non puoi usare questa carta per muovere una miniatura dopo che è respawnata alla fine del tuo turno.
+			\item \textbf{Tagback Grenade}: Puoi usare questa carta quando ricevi danno da un giocatore che \textbf{puoi vedere}.
+			Dai 1 \hyperref[sec:mark]{mark} a quel giocatore.
+			\item \textbf{Teleporter}: Puoi giocare questa carta nel tuo turno prima o dopo aver svolto una qualsiasi azione.
+			Prendi la tua miniatura e piazzala in qualsiasi quadrato della plancia.
+			Non puoi usare questa carta dopo aver visto dove un giocatore ha respawnato la sua miniatura alla fine del tuo turno.
+		\end{itemize}
+		Il mazzo delle powerup cards \textbf{non può} finire durante la partita. 
+		Quando l'ultima carta viene pescata vengono mescolati gli scarti e formato un nuovo mazzo. 
+		
+		La carta potenziamento può esere utilizzata in due modi:
+		\begin{itemize}
+			\item Giocata e scartata: Viene utilizzata seguendo l'effetto della carta stessa, descritto in precedenza.
+			\item Scartata come munizione: Viene scartata al posto di un \hyperref[sec:ammo-cubes]{ammo cube} del colore della carta per ricaricare un'arma. 
+		\end{itemize}
+		Ogni giocatore può possedere \textbf{massimo 3 powerup cards}.
+		
+		All'inizio della partita vengono mescolate e disposte in un mazzo sulla plancia.
+		Ogni giocatore, al momento dello spawn, ne pesca due e ne sceglie una. 
+		Dopo aver scelto lo spawnpoint del colore della carta scelta, l'altra viene mostrata a tutti i giocatori e poi scartata.
+		
+	\newpage
+	
+	\subsection{Weapon Cards} \label{sec:weapon-cards}
+		Nella scatola ci sono 21 weapon cards, tutte diverse. Circa metà delle carte permettono di targettare un giocatore che \textbf{puoi vedere}.
+		Ogni arma ha un costo di ricarica in \hyperref[sec:ammo-cubes]{ammo cubes}.
+		Quando raccolta, un'arma è parzialmente carica. Il primo \hyperref[sec:ammo-cubes]{ammo cube} richiesto per la ricarica è infatti già nell'arma. Per poterla utilizzare bisogna pagare i rimanenti.
+		
+		Ogni arma può essere:
+		\begin{itemize}
+			\item \textbf{Normale}: Arma che non ha nè effetti aggiuntivi nè diverse modalità di fuoco.
+			\item \textbf{Con Effetti Aggiuntivi}: Arma che oltre al normale effetto della carta ha la possibilità di utilizzare uno o più effetti aggiuntivi.
+			\begin{itemize}
+				\item \textbf{Basic Effect}: Effetto base utilizzabile senza spendere costi aggiuntivi a quello di ricarica.
+				\item \textbf{Optional Effect}: Effetto \textbf{aggiuntivo} all'effetto base dell'arma. Alcune volte è necessario pagare \hyperref[sec:ammo-cubes]{ammo cubes} per poterlo attivare. Se la carta lo prevede è possibili attivare più effetti aggiuntivi della carta.
+			\end{itemize}
+			\item \textbf{Con Modalità di Fuoco Multipla}: Arma che può scegliere tra due modalità di fuoco.
+			\begin{itemize}
+				\item \textbf{Basic Mode}: Modalità di fuoco base utilizzabile senza spendere costi aggiuntivi a quello di ricarica.
+				\item \textbf{Alternate Fire Mode}: Modalità di fuoco \textbf{alternativa} a quella base dell'arma. Alcune volte è necessario pagare \hyperref[sec:ammo-cubes]{ammo cubes} per poterla attivare. 
+				Puoi scegliere questa modalità di fuoco \textbf{o} quella base.
+			\end{itemize}
+		\end{itemize}
+	
+		Il mazzo delle weapons cards \textbf{può} finire durante la partita.
+		
+		Ogni giocatore può possedere \textbf{massimo 3 weapon cards}, nel caso si raccolga una quarta arma questa verrà scambiata con una delle 3 già presenti in mano.
+		
+		Per una descrizione dettagliata di ogni arma consultare \texttt{adrenaline-rules-weapons-**.pdf}.
+		
+		All'inizio della partita le weapon cards vengono disposte negli slot degli spawnpoint. 
+	\subsection{Bot Card}
+		// TODO
+\section{Mark} \label{sec:mark}
+	Il mark viene assegnato in seguito a effetti di \hyperref[sec:powerup-cards]{powerup cards}, \hyperref[sec:weapon-cards]{weapon cards} o in seguito a una overkill.
+	Quando ad un giocatore marchiato vengono inflitti danni da un giocatore che lo aveva precedentemente marchiato, i \hyperref[sec:damage-tokens]{damage tokens} che rappresentano i marks vengono spostati nella \hyperref[sec:hp-box]{HP box} infliggendo così danni aggiuntivi.
+
+\newpage
+
+\section{Fasi di Gioco}
+	\subsection{Run Around}
+		// TODO
+	\subsection{Grab Stuff}
+		// TODO
+	\subsection{Shoot People}
+		// TODO
+	\subsection{Reload}
+		// TODO
+	\subsection{Score each board that received a killshot}
+		// TODO
+		
+\section{Modalità di gioco alternative}
+	// TODO
+\end{document}
