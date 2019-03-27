@@ -11,6 +11,8 @@ public class Room {
         this.id = id;
     }
 
+    public int getId() { return id;}
+
     public Room getNorth() {
         return north;
     }
