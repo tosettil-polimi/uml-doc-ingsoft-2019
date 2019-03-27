@@ -90,7 +90,6 @@
         }
       ]
     },
-    ,
     {
       "id":2,
       "rooms":[
@@ -147,7 +146,7 @@
           "color":"YELLOW",
           "south":11,
           "west":0,
-          "east":7,
+          "east":8,
           "north":3
         },
         {

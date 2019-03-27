@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f1b2aafc-b655-4656-963a-5e51844c1c2a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../map_implementation/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../map_implementation/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../map_implementation/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/../map_implementation/src/main/java/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../map_implementation/src/main/resources/map.json" beforeDir="false" afterPath="$PROJECT_DIR$/../map_implementation/src/main/resources/map.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/../map_implementation/target/" />
@@ -27,8 +26,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../map_implementation/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="900">
+              <caret line="60" selection-start-line="60" selection-end-line="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,8 +47,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../map_implementation/src/main/resources/map.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1548">
-              <caret line="191" column="5" selection-start-line="191" selection-start-column="5" selection-end-line="191" selection-end-column="5" />
+            <state relative-caret-position="-1073">
+              <caret line="92" column="5" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -63,8 +62,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/../map_implementation/src/main/java/Room.java" />
-        <option value="$PROJECT_DIR$/../map_implementation/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/../map_implementation/src/main/resources/map.json" />
+        <option value="$PROJECT_DIR$/../map_implementation/src/main/java/Main.java" />
       </list>
     </option>
   </component>
@@ -121,7 +120,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553700249528" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553704257596" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -161,12 +160,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553686792384</updated>
-      <workItem from="1553686795559" duration="12793000" />
+      <workItem from="1553686795559" duration="14595000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12793000" />
+    <option name="totallyTimeSpent" value="14595000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -234,8 +233,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../map_implementation/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="900">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -244,8 +243,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../map_implementation/src/main/resources/map.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1548">
-          <caret line="191" column="5" selection-start-line="191" selection-start-column="5" selection-end-line="191" selection-end-column="5" />
+        <state relative-caret-position="-1073">
+          <caret line="92" column="5" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
         </state>
       </provider>
     </entry>

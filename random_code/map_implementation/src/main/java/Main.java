@@ -58,17 +58,16 @@ public class Main {
                         roomList.get(j + 1).setWest(roomList.get(temp));
                     }
                 }
+
+                Room temp = roomList.get(1);
+                while (temp != null) {
+                    printLine(temp);
+                    temp = temp.getSouth();
+                }
             }
         } catch (FileNotFoundException e) {
             System.out.println("NOT FOUND");
         }
-
-        Room temp = roomList.get(1);
-        while (temp != null) {
-            printLine(temp);
-            temp = temp.getSouth();
-        }
-
 
     }
 
