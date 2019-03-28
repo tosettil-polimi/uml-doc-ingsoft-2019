@@ -4,12 +4,14 @@ import org.json.JSONTokener;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
 
     private static List<Room> roomList = new ArrayList<>();
+    private static int line;
 
     public static void main(String[] args) {
         String path = "map.json";
@@ -24,10 +26,17 @@ public class Main {
             JSONObject object = new JSONObject(tokener);
 
             JSONArray maps = object.getJSONArray("maps");
-            for (int i = 0; i < maps.length(); i++) {
-                JSONObject map = maps.getJSONObject(i);
+            for (;;) {
+                Scanner in = new Scanner(System.in);
+                System.out.print("Inserire il codice della mappa con ui si desidera giocare (-1 per terminare la scelta) >> ");
+                int i = in.nextInt();
+
+                if(i <= -1 || i > 4) return;
+
+                JSONObject map = maps.getJSONObject(i - 1);
                 JSONArray rooms = map.getJSONArray("rooms");
 
+                roomList.clear();
                 for (int j = 0; j < rooms.length() + 1; j++) {
                     roomList.add(new Room(j));
                 }
@@ -59,10 +68,29 @@ public class Main {
                     }
                 }
 
+                int stop = 0;
                 Room temp = roomList.get(1);
-                while (temp != null) {
-                    printLine(temp);
-                    temp = temp.getSouth();
+                while (stop < 3) {
+                    if (temp != null) {
+                        line = 0;
+                        printLine(temp);
+                        temp = temp.getSouth();
+                        ++stop;
+                    } else {
+                        line = 1;
+                        System.out.print("    ");
+                        printTop(roomList.get(roomList.size() - 3));
+                        System.out.println("");
+                        System.out.print("    ");
+                        printMiddle(roomList.get(roomList.size() - 3));
+                        System.out.println("");
+                        System.out.print("    ");
+                        printBottom(roomList.get(roomList.size() - 3));
+                        System.out.println("");
+                        ++stop;
+                    }
+
+
                 }
             }
         } catch (FileNotFoundException e) {
@@ -73,11 +101,15 @@ public class Main {
 
     private static void printLine(Room room) {
         printTop(room);
+        System.out.flush();
         System.out.println("");
+        System.out.flush();
         printMiddle(room);
         System.out.println("");
+        System.out.flush();
         printBottom(room);
-        System.out.println("\n");
+        System.out.println("");
+        System.out.flush();
     }
 
     private static void printTop(Room room) {
@@ -97,6 +129,7 @@ public class Main {
             }
             System.out.print(room.getColor().getColor() + "+" + Color.valueOf("RESET").getColor());
             System.out.print(" ");
+            ++line;
             if(room.getEast() != null) {
                 if(room.getEast().equals(roomList.get(0))) {
                     printTop(roomList.get(room.getId() + 1));
@@ -104,10 +137,18 @@ public class Main {
                     printTop(room.getEast());
                 }
             } else {
-                return;
+                if (line < 3) {
+                    System.out.print("   ");
+                    ++line;
+                    printTop(roomList.get(room.getId() + 2));
+                } else return;
             }
         } else {
-            return;
+            if (line < 3) {
+                System.out.print("   ");
+                ++line;
+                printTop(roomList.get(room.getId() + 2));
+            } else return;
         }
     }
 
@@ -140,6 +181,7 @@ public class Main {
             }
 
             System.out.print(" ");
+            ++line;
             if(room.getEast() != null) {
                 if(room.getEast().equals(roomList.get(0))) {
                     printMiddle(roomList.get(room.getId() + 1));
@@ -147,10 +189,18 @@ public class Main {
                     printMiddle(room.getEast());
                 }
             } else {
-                return;
+                if (line < 6) {
+                    System.out.print("   ");
+                    ++line;
+                    printTop(roomList.get(room.getId() + 2));
+                } else return;
             }
         } else {
-            return;
+            if (line < 6) {
+                System.out.print("   ");
+                ++line;
+                printTop(roomList.get(room.getId() + 2));
+            } else return;
         }
     }
 
@@ -171,6 +221,7 @@ public class Main {
             }
             System.out.print(room.getColor().getColor() + "+" + Color.valueOf("RESET").getColor());
             System.out.print(" ");
+            ++line;
 
             if(room.getEast() != null) {
                 if(room.getEast().equals(roomList.get(0))) {
@@ -179,10 +230,18 @@ public class Main {
                     printBottom(room.getEast());
                 }
             } else {
-                return;
+                if (line < 9) {
+                    System.out.print("   ");
+                    ++line;
+                    printTop(roomList.get(room.getId() + 2));
+                } else return;
             }
         } else {
-            return;
+            if (line < 9) {
+                System.out.print("   ");
+                ++line;
+                printTop(roomList.get(room.getId() + 2));
+            } else return;
         }
     }
 }
