@@ -1,0 +1,69 @@
+
+O
+squid:S106?"9Replace this use of System.out or System.err by a logger.(‡î¿
+T
+squid:S106M"9Replace this use of System.out or System.err by a logger.(ŞÒ—üÿÿÿÿ
+P
+squid:S106®"9Replace this use of System.out or System.err by a logger.(×•œ²
+U
+squid:S106Œ"9Replace this use of System.out or System.err by a logger.(“Íûÿÿÿÿ
+P
+squid:S106"9Replace this use of System.out or System.err by a logger.(×•œ²
+nsquid:S3776s"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(“ èŞøÿÿÿÿ
+O
+squid:S106¦"9Replace this use of System.out or System.err by a logger.(õ£˜1
+nsquid:S3776T"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(‹ŒÖõÿÿÿÿÿ
+U
+squid:S106‡"9Replace this use of System.out or System.err by a logger.(“Íûÿÿÿÿ
+U
+squid:S106"9Replace this use of System.out or System.err by a logger.(îàØóıÿÿÿÿ
+csquid:S1192#"GDefine a constant instead of duplicating this literal "RESET" 22 times.(º±×Ïûÿÿÿÿ
+T
+squid:S106w"9Replace this use of System.out or System.err by a logger.(îàØóıÿÿÿÿ
+O
+squid:S106«"9Replace this use of System.out or System.err by a logger.(õ£˜1
+N
+squid:S106\"9Replace this use of System.out or System.err by a logger.(õ£˜1
+T
+squid:S106{"9Replace this use of System.out or System.err by a logger.(¯ÚÇëıÿÿÿÿ
+T
+squid:S106y"9Replace this use of System.out or System.err by a logger.(“Íûÿÿÿÿ
+T
+squid:S106Z"9Replace this use of System.out or System.err by a logger.(îàØóıÿÿÿÿ
+T
+squid:S106^"9Replace this use of System.out or System.err by a logger.(¯ÚÇëıÿÿÿÿ
+3squid:S3626º"Remove this redundant jump.(ûÁİ…
+2squid:S3626l"Remove this redundant jump.(ûÁİ…
+3squid:S3626·"Remove this redundant jump.(ûÁİ…
+U
+squid:S106…"9Replace this use of System.out or System.err by a logger.(îàØóıÿÿÿÿ
+1squid:S1220""Move this file to a named package.
+3squid:S3626—"Remove this redundant jump.(ûÁİ…
+3squid:S3626š"Remove this redundant jump.(ûÁİ…
+T
+squid:S106O"9Replace this use of System.out or System.err by a logger.(ŞÒ—üÿÿÿÿ
+U
+squid:S106‰"9Replace this use of System.out or System.err by a logger.(¯ÚÇëıÿÿÿÿ
+2squid:S3626o"Remove this redundant jump.(ûÁİ…
+U
+squid:S106¨"9Replace this use of System.out or System.err by a logger.(¯ÚÇëıÿÿÿÿ
+N
+squid:S106a"9Replace this use of System.out or System.err by a logger.(õ£˜1
+P
+squid:S106­"9Replace this use of System.out or System.err by a logger.(„§³û
+T
+squid:S106~"9Replace this use of System.out or System.err by a logger.(“Íûÿÿÿÿ
+isquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(Çµí‘
+O
+squid:S106c"9Replace this use of System.out or System.err by a logger.(„§³û
+O
+squid:S106d"9Replace this use of System.out or System.err by a logger.(×•œ²
+U
+squid:S106¤"9Replace this use of System.out or System.err by a logger.(îàØóıÿÿÿÿ
+P
+squid:S106 "9Replace this use of System.out or System.err by a logger.(„§³û
+O
+squid:S106V"9Replace this use of System.out or System.err by a logger.(„§³û
+T
+squid:S106Q"9Replace this use of System.out or System.err by a logger.(ƒÇãˆúÿÿÿÿ
+osquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(õÙÔÀüÿÿÿÿ
